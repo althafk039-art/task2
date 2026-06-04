@@ -32,7 +32,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get(`${API_URL}/tasks`);
+      const response = await axios.get('https://taskplaner-nhst.onrender.com/tasks');
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -48,7 +48,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post(`${API_URL}/tasks`, {
+      const response = await axios.post('https://taskplaner-nhst.onrender.com/tasks', {
         subject,
         deadline,
         taskDetails
@@ -70,7 +70,7 @@ function App() {
   // Delete/Complete task handler
   const handleDeleteTask = async (id) => {
     try {
-      await axios.delete(`${API_URL}/tasks/${id}`);
+      await axios.delete(`https://taskplaner-nhst.onrender.com/tasks/${id}`);
       // Filter out the deleted task from frontend state
       setTasks(tasks.filter(task => task._id !== id));
     } catch (error) {
