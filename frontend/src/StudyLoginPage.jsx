@@ -8,7 +8,7 @@ function StudyLoginPage(props) {
     
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/login', { username, password });
+            const response = await axios.post('https://taskplaner-nhst.onrender.com/login', { username, password });
             if (response.status === 200) props.setIsLoggedIn(true);
         } catch (error) {
             alert("Invalid username or password");
@@ -17,7 +17,7 @@ function StudyLoginPage(props) {
     
     const handleRegister = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/register', { username, password });
+            const response = await axios.post('https://taskplaner-nhst.onrender.com/register', { username, password });
             if (response.status === 201) {
                 alert("Account created! log in now.");
                 setIsRegistering(false);
