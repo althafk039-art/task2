@@ -21,7 +21,7 @@ function App() {
   const [taskDetails, setTaskDetails] = useState("");
 
   // Backend Base URL
-  const API_URL = 'http://localhost:3000';
+  const API_URL = 'https://taskplaner-nhst.onrender.com';
 
   // Fetch tasks from the backend when the user logs in
   useEffect(() => {
